@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador de Notas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .resultado {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+        }
+        .pruebas {
+            margin-top: 30px;
+        }
+        .pruebas h2 {
+            color: #4CAF50;
+        }
+        .pruebas pre {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Evaluador de Notas</h1>
+        <label for="nota">Ingresa una nota (0-100):</label>
+        <input type="number" id="nota" min="0" max="100" placeholder="Ej: 85">
+        <button onclick="evaluarNota()">Evaluar Nota</button>
+
+        <div class="resultado" id="resultado"></div>
+
+        <div class="pruebas">
+            <h2>Pruebas Adicionales</h2>
+            <pre id="pruebas"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Función para evaluar la nota ingresada por el usuario
+        function evaluarNota() {
+            const nota = parseInt(document.getElementById('nota').value);
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (nota >= 0 && nota <= 100) {
+                if (nota >= 90) {
+                    resultadoDiv.innerHTML = `Nota: ${nota} - <strong>Excelente</strong>. ¡Felicidades, has aprobado con la máxima calificación!`;
+                } else if (nota >= 75 && nota <= 89) {
+                    resultadoDiv.innerHTML = `Nota: ${nota} - <strong>Bien</strong>. Has aprobado, sigue esforzándote.`;
+                } else if (nota >= 60 && nota <= 74) {
+                    resultadoDiv.innerHTML = `Nota: ${nota} - <strong>Suficiente</strong>. Has aprobado, pero puedes mejorar.`;
+                } else {
+                    resultadoDiv.innerHTML = `Nota: ${nota} - <strong>No aprobado</strong>. Debes estudiar más para la próxima.`;
+                }
+            } else {
+                resultadoDiv.innerHTML = "Error: La nota debe ser un valor entre 0 y 100.";
+            }
+        }
+
+        // Pruebas adicionales con diferentes valores de nota
+        let notasDePrueba = [45, 60, 75, 90, 0, 100, -10, 110];
+        let pruebasOutput = "";
+
+        notasDePrueba.forEach((notaPrueba) => {
+            pruebasOutput += `Probando con nota = ${notaPrueba}\n`;
+            if (notaPrueba >= 0 && notaPrueba <= 100) {
+                if (notaPrueba >= 90) {
+                    pruebasOutput += `Nota: ${notaPrueba} - Excelente. ¡Felicidades, has aprobado con la máxima calificación!\n\n`;
+                } else if (notaPrueba >= 75 && notaPrueba <= 89) {
+                    pruebasOutput += `Nota: ${notaPrueba} - Bien. Has aprobado, sigue esforzándote.\n\n`;
+                } else if (notaPrueba >= 60 && notaPrueba <= 74) {
+                    pruebasOutput += `Nota: ${notaPrueba} - Suficiente. Has aprobado, pero puedes mejorar.\n\n`;
+                } else {
+                    pruebasOutput += `Nota: ${notaPrueba} - No aprobado. Debes estudiar más para la próxima.\n\n`;
+                }
+            } else {
+                pruebasOutput += "Error: La nota debe ser un valor entre 0 y 100.\n\n";
+            }
+        });
+
+        // Mostrar las pruebas adicionales en el HTML
+        document.getElementById('pruebas').textContent = pruebasOutput;
+    </script>
+</body>
+</html>
