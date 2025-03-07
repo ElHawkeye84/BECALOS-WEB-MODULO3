@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #1e1e1e; /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50; /* Color verde para el título */
+    margin-bottom: 20px;
+}
+
+.password-display {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.password-display input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #333; /* Borde más oscuro */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333; /* Fondo oscuro para el input */
+    color: #ffffff; /* Texto blanco */
+}
+
+.password-display button {
+    background-color: #4CAF50; /* Botón verde */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.password-display button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+.options {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+    color: #ffffff; /* Texto blanco */
+}
+
+.strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.strength span {
+    font-weight: bold;
+    color: #ffffff; /* Texto blanco */
+}
+
+#strength-indicator {
+    width: 100px;
+    height: 10px;
+    background-color: #444; /* Fondo oscuro para el indicador */
+    border-radius: 5px;
+}
+
+.generate-btn {
+    background-color: #4CAF50; /* Botón verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.generate-btn:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
