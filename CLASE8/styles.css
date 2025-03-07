@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #1e1e1e; /* Fondo del contenedor */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50; /* Color verde para el título */
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333; /* Borde más oscuro */
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Fondo oscuro para el textarea */
+    color: #ffffff; /* Texto blanco */
+    resize: vertical; /* Permite redimensionar verticalmente el textarea */
+}
+
+input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
+    color: #ffffff; /* Texto blanco */
+}
+
+button {
+    background-color: #4CAF50; /* Botón verde */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+.comment {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333; /* Fondo oscuro para los comentarios */
+    border-left: 4px solid #4CAF50;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment small {
+    color: #ccc; /* Texto gris claro para la fecha */
+}
+
+.comment img {
+    max-width: 100%; /* Ajusta el tamaño de la imagen */
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    color: #ff0000; /* Color rojo para el botón de eliminar */
+    cursor: pointer;
+    float: right;
+}
+
+#secret-button {
+    margin-top: 20px;
+    background-color: #ff5722; /* Color naranja para el botón secreto */
+}
+
+#secret-button:hover {
+    background-color: #e64a19; /* Naranja más oscuro al pasar el mouse */
+}
+
+#secret-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#secret-message.hidden {
+    display: none; /* Oculta el mensaje secreto inicialmente */
+}
+
+#secret-message img {
+    max-width: 100%; /* Ajusta el tamaño del GIF */
+    border-radius: 4px;
+    margin-top: 10px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Comentarios</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Caja de Comentarios</h1>
+
+        
+        <form id="comment-form">
+            <textarea id="comment" rows="4" placeholder="Escribe tu comentario aquí..." required></textarea>
+            <input type="file" id="image" accept="image/*"> <!-- Campo para subir imágenes -->
+            <button type="submit">Agregar Comentario</button>
+        </form>
+
+        <!-- Área para mostrar los comentarios -->
+        <div id="comments-list"></div>
+
+        <!-- Botón para el mensaje secreto -->
+        <button id="secret-button" onclick="mostrarMensajeSecreto()">Presiona para secreto</button>
+
+        <        <div id="secret-message" class="hidden">
+            <p>¡Gracias, Sensei Dolores Parra, por su tiempo y dedicación! Le deseo mucho éxito en todos tus futuros proyectos. 🚀💻❤️</p>
+            <img src="https://i.pinimg.com/originals/29/27/cf/2927cfa29e0bd02b474c20080c3d2a70.gif" alt="GIF de agradecimiento">
+        </div>
+    </div>
+
+    <script src="ComentariosLibros.js"></script> 
+</body>
+</html>
